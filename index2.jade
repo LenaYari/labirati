@@ -1,0 +1,77 @@
+doctype html
+html(lang="en")
+	head
+		title kidstore
+		meta(charset='utf-8')
+		meta(name='viewport' content='width=device-width, initial-scale=1')
+		script(src='https://code.jquery.com/jquery-2.2.4.min.js', integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=",  crossorigin="anonymous")
+		link(href='./css/bootstrap.min.css', rel='stylesheet')
+		link(href='./css/mycss2.css', rel='stylesheet')
+		script(src='./js/bootstrap.min.js')
+		script(src='./js/map.js')
+	body
+		.container(id='maincnt')
+			.row
+				nav.navbar.navbar-collapse(id='navbarcollapse')
+					#bignav.container
+						#header.navbar-header
+							a.navbar-brand(href='#') Labi Rati
+						ul.nav.navbar-nav
+							li.active(id='nhold')
+								img(src='images/flazok.png', id='navflag')
+								a(href='#', id='mntxt')
+										h4(id='menutxt') Rati
+							li(id='nhold')
+								img(src='images/flazok.png', id='navflag')
+								a(href='#', id='mntxt')
+										h4(id='menutxt') Auto-kreslini
+							li(id='nhold')
+								img(src='images/flazok.png', id='navflag')
+								a(href='#', id='mntxt')
+										h4(id='menutxt') Akcijas
+							li(id='nhold')
+								img(src='images/flazok_zamena.png', id='navflag')
+								a(href='#', id='mntxt')
+										h4(id='menutxt1') Kontakti
+						ul.nav.navbar-nav.navbar-right(id='langbar')
+							li.active(id='circlang')
+								img(src='images/lang.png', id='langbg')
+								a(href='#', id='ltxt') LV
+							li(id='circlang')
+								img(src='images/lang.png', id='langbg')
+								a(href='#', id='ltxt') RU
+			#smallnav.navbar-header
+				.navbar-header
+					a.navbar-brand(href='#') Labi Rati
+				button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-navbar', aria-controls='bs-navbar', aria-expanded='false')
+					span.glyphicon.glyphicon-align-justify
+				nav.navbar-collapse.collapse(id='bs-navbar', aria-expanded='false', style='height: 1px;')
+					ul.nav.navbar-nav
+						li
+							a(href='#') Rati
+						li
+							a(href='#') Auto-kreslini
+						li
+							a(href='#') Akcijas
+						li
+							a(href='#') Kontakti
+			#mapcont.container
+				#bgmap.row
+					img(src='images/flag_cena_zl.png', id='mapflag')
+					#mapdiv.col-xs-12.col-sm-12.col-md-8.col-lg-8
+						#map
+					#adreselaiks.col-xs-12.col-sm-12.col-md-4.col-lg-4 
+						h4(id='adrshd') Veikala adrese
+						p(id='adrs') Riga, Stabu iela 87
+						h5(id='dlkshd') Darba laiks:
+						p(id='dlks') Pirmdienas: 11:00-20:00
+						p(id='dlks') O, T, C, P: 11:00-17:00
+						p(id='dlks') Sestdiena: 11:00-15:00
+					.clearfix.visible-md-block
+					.clearfix.visible-lg-block
+					#talr.col-xs-12.col-sm-12.col-md-4.col-lg-4
+						h5(id='tlr') Klientu serviss:
+							p(id='tlrnum') (371) 77 777 777
+						h5(id='tlr') Administracija:
+							p(id='tlrnum') (371) 55 555 555
+				script(src='https://maps.googleapis.com/maps/api/js?callback=initMap', async, defer)

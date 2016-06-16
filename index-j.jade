@@ -1,0 +1,43 @@
+doctype html
+html(lang="en")
+	head
+		title kidstore
+		meta(charset='utf-8')
+		meta(name='viewport' content='width=device-width, initial-scale=1')
+		script(src='https://code.jquery.com/jquery-2.2.4.min.js', integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=",  crossorigin="anonymous")
+		link(href='./css/bootstrap.min.css', rel='stylesheet')
+		link(href='./css/mycss2.css', rel='stylesheet')
+		script(src='./js/bootstrap.min.js')
+	body
+		#bgr2
+			.header
+				#navback
+					img(src='testlogo.png')
+					#navbar.inline
+						#nav1.nav
+							img(src='navcircle.jpg', class='navimg')
+							h3 Rati
+						#nav2.nav
+							img(src='navcircle.jpg', class='inline')
+							h3 Auto-kresli
+						#nav3.nav
+							img.navimg(src='navcircle.jpg')
+							h3 Akcijas
+						#nav4.nav
+							img(src='navcircle.jpg', class='inline')
+							h3 Kontakti
+					#langbar
+						.inline LV
+						.inline RU
+			.items
+				img(src='item1.jpeg', class='imgitem')
+				img(src='item1.jpeg', class='imgitem')
+				img(src='item1.jpeg', class='imgitem')
+				img(src='item1.jpeg', class='imgitem')
+			.pagenum
+				#prevpg.inline Previous
+				#displaypg.inline 2/12
+				#nextpg.inline Next
+			.footer
+				#copyright 2016
+				#adress Veikala adrese

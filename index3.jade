@@ -1,0 +1,166 @@
+doctype html
+html(lang="en")
+	head
+		title Labi Rati
+		meta(charset='utf-8')
+		meta(name='viewport' content='width=device-width, initial-scale=1')
+		script(src='https://code.jquery.com/jquery-2.2.4.min.js', integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=", crossorigin="anonymous")
+		link(href='./css/bootstrap.min.css', rel='stylesheet')
+		link(href='./css/mycss2.css', rel='stylesheet')
+		script(src='./js/bootstrap.min.js')
+		script(src='./js/map.js')
+	body
+		.container(id='maincnt')
+			.row
+				nav.navbar.navbar-collapse(id='navbarcollapse')
+					#bignav.container
+						#header.navbar-header
+							a.navbar-brand(href='#') Labi Rati
+						ul.nav.navbar-nav
+							li.active(id='nhold')
+								img(src='images/flazok.png', id='navflag')
+								a(href='#', id='mntxt')
+										h4(id='menutxt') Rati
+							li(id='nhold')
+								img(src='images/flazok.png', id='navflag')
+								a(href='#', id='mntxt')
+										h4(id='menutxt') Auto-kreslini
+							li(id='nhold')
+								img(src='images/flazok.png', id='navflag')
+								a(href='#', id='mntxt')
+										h4(id='menutxt') Akcijas
+							li(id='nhold')
+								img(src='images/flazok.png', id='navflag')
+								a(href='#', id='mntxt')
+										h4(id='menutxt') Kontakti
+						ul.nav.navbar-nav.navbar-right(id='langbar')
+							li.active(id='circlang')
+								img(src='images/lang.png', id='langbg')
+								a(href='#', id='ltxt') LV
+							li(id='circlang')
+								img(src='images/lang.png', id='langbg')
+								a(href='#', id='ltxt') RU
+			#smallnav.navbar-header
+				.navbar-header
+					a.navbar-brand(href='#') Labi Rati
+				button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-navbar', aria-controls='bs-navbar', aria-expanded='false')
+					span.glyphicon.glyphicon-align-justify
+				nav.navbar-collapse.collapse(id='bs-navbar', aria-expanded='false', style='height: 1px;')
+					ul.nav.navbar-nav
+						li
+							a(href='#') Rati
+						li
+							a(href='#') Auto-kreslini
+						li
+							a(href='#') Akcijas
+						li
+							a(href='#') Kontakti
+			//- link to gallery tutorial http://tympanus.net/codrops/2013/03/19/thumbnail-grid-with-expanding-preview/
+			.row
+				#item.col-xs-12.col-sm-12.col-md-4.col-lg-4.col-md-offset-2.col-lg-offset-2
+					img(src='item1.jpeg', class='item', id='it1')
+					.priceblock
+						img(src='images/flag_cena.png', id='flagprice')
+						h3(id='price') 230,-
+					#zoomarr
+						img(src='images/info.png', id='zoomarr1')
+						img(src='images/info_2.png', id='zoomarr2')
+				#item.col-xs-12.col-sm-12.col-md-4.col-lg-4
+					img(src='item1.jpeg', class='item', id='it2')
+					.priceblock
+						img(src='images/flag_cena_zl.png', id='flagprice')
+						h3(id='price') 280,-
+					#zoomarr
+						img(src='images/info.png', id='zoomarr1')
+						img(src='images/info_2.png', id='zoomarr2')
+			.row
+				#item.col-xs-12.col-sm-12.col-md-4.col-lg-4.col-md-offset-2.col-lg-offset-2
+					img(src='item1.jpeg', class='item', id='it1')
+					.priceblock
+						img(src='images/flag_cena_zl.png', id='flagprice')
+						h3(id='price') 330,-
+					#zoomarr
+						img(src='images/info.png', id='zoomarr1')
+						img(src='images/info_2.png', id='zoomarr2')
+				#item.col-xs-12.col-sm-12.col-md-4.col-lg-4
+					img(src='item1.jpeg', class='item', id='it2')
+					.priceblock
+						img(src='images/flag_cena.png', id='flagprice')
+						h3(id='price') 280,-
+					#zoomarr
+						img(src='images/info.png', id='zoomarr1')
+						img(src='images/info_2.png', id='zoomarr2')
+			.row
+				.zoomitem.col-xs-12.col-sm-12.col-md-12.col-lg-12
+					#filterbtn
+						button(type='button', class='btn btn-secondary btn-sm', id='filtrs') Filtrs
+							a(href='#')
+						#krasa.filterposition
+							.form-group
+								label(for="krasa") Krasa:
+								select.form-control(id="krasa")
+									option roza
+									option sarkana
+									option melna
+									option balta
+						#cena.filterposition
+							.form-group
+								label(for="cena") Cena:
+								select.form-control(id="cena")
+									option lidz 180
+									option 180-250
+									option virs 250
+						#dofilter.filterposition
+							button(type='button', class='btn btn-primary btn-sm', id='fbutton')
+								span.underline Filtret
+								a(href='#')
+					#zimg.col-xs-12.col-sm-12.col-md-6.col-lg-6
+						img(src='item1.jpeg', id='zoomed')
+						h3(id='zprice') 280,-
+					#about.col-xs-12.col-sm-12.col-md-6.col-lg-6
+						p(id='abouttext') Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+						p(id='abouttext') Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+					img(src='images/images/razvorot_08_06.png', id='left')
+					img(src='images/images/razvorot_08_08.png', id='right')
+					img(src='images/images/hvostik_razvorita.png', id='zoomarr3')
+					#colorvar.col-xs-12.col-sm-12.col-md-12.col-lg-12
+						.cvar.col-xs-4.col-sm-4.col-md-2.col-lg-2
+							img(src='item1.jpeg', id='colored')
+						.cvar.col-xs-4.col-sm-4.col-md-2.col-lg-2
+							img(src='item1.jpeg', id='colored')
+						.cvar.col-xs-4.col-sm-4.col-md-2.col-lg-2
+							img(src='item1.jpeg', id='colored')
+			.row
+				#item.col-xs-12.col-sm-12.col-md-4.col-lg-4.col-md-offset-2.col-lg-offset-2
+					img(src='item1.jpeg', class='item', id='it1')
+					.priceblock
+						img(src='images/flag_cena_zl.png', id='flagprice')
+						h3(id='price') 330,-
+					#zoomarr
+						img(src='images/info.png', id='zoomarr1')
+						img(src='images/info_2.png', id='zoomarr2')
+				#item.col-xs-12.col-sm-12.col-md-4.col-lg-4
+					img(src='item1.jpeg', class='item', id='it2')
+					.priceblock
+						img(src='images/flag_cena.png', id='flagprice')
+						h3(id='price') 280,-
+					#zoomarr
+						img(src='images/info.png', id='zoomarr1')
+						img(src='images/info_2.png', id='zoomarr2')
+
+			.container
+				.pagenum
+					ul.pager
+						li
+							a.inln(href='#')
+								img(src='images/strelka_left.png', id='pgbtn')
+						li
+							h5.inln 2/12
+						li
+							a.inln(href='#')
+								img(src='images/strelka_right.png', id='pgbtn')
+			#foot.row
+				#copyright.col-xs-12.col-sm-12.col-md-4.col-lg-4
+					h5(id='cprt') 2016
+				#adress.col-xs-12.col-sm-12.col-md-4.col-lg-4.col-md-offset-4.col-lg-offset-4
+					h5(id='adrs') Veikala adrese
